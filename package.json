@@ -1,0 +1,27 @@
+{
+  "name": "testeslint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ./src/index.js",
+    "lintfile": "eslint -f json ./src/index.js > report.json ; exit 0;",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
+    "build": "echo \"build successful\" "
+  },
+  "pre-commit": [
+    "precommit-msg",
+    "lint"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-react": "^7.14.3",
+    "pre-commit": "^1.2.2"
+  }
+}
